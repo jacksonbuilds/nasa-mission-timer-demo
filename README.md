@@ -43,10 +43,10 @@ You'll be prompted to enter a countdown time in seconds and then can control the
 
 Tests are written with pytest. From the project root:
 
-# Install pytest if you haven't already
+## Install pytest if you haven't already
 pip install pytest
 
-# Run tests with proper path
+## Run tests with proper path
 PYTHONPATH=src pytest
 
 ## 📂 Project Structure
