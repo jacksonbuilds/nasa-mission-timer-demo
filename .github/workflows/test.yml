@@ -29,3 +29,12 @@ jobs:
       run: |
         coverage run -m pytest
         coverage report
+        coverage xml  # generates coverage.xml required by Codecov
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: coverage.xml
+        flags: unittests
+        name: codecov-coverage-report
