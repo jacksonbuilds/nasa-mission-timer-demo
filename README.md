@@ -1,3 +1,5 @@
+![Tests](https://github.com/jacksonbuilds/nasa-mission-timer-demo/actions/workflows/test.yml/badge.svg)
+
 # 🚀 NASA Mission Timer Demo
 
 This is a small, educational Python package that simulates a mission countdown timer with telemetry logging. It's built to reflect software development principles inspired by [NASA's NPR 7150.2D](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_). The project includes a structured codebase, documentation, and tests to demonstrate good engineering discipline.
