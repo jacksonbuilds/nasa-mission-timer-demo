@@ -1,4 +1,5 @@
 from missiontimer.countdown_timer import CountdownTimer, TimerState
+from unittest.mock import patch
 
 def test_timer_initialization():
     timer = CountdownTimer(10)
@@ -12,7 +13,8 @@ def test_reset_functionality():
     assert timer.remaining == 5
     assert timer.state == TimerState.IDLE
 
-def test_pause_resume_transitions():
+@patch('time.sleep', return_value=None)
+def test_pause_resume_transitions(mock_sleep):
     timer = CountdownTimer(3)
 
     # Start the timer
