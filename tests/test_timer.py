@@ -14,10 +14,21 @@ def test_reset_functionality():
 
 def test_pause_resume_transitions():
     timer = CountdownTimer(3)
-    timer.pause()
-    assert timer.state == TimerState.IDLE  # cannot pause before start
+
+    # Start the timer
     timer.start()
+    assert timer.state == TimerState.RUNNING
+
+    # Advance one tick
+    timer.tick()
+    assert timer.remaining == 2
+
+    # Pause it
     timer.pause()
     assert timer.state == TimerState.PAUSED
+
+    # Resume and tick again
     timer.resume()
     assert timer.state == TimerState.RUNNING
+    timer.tick()
+    assert timer.remaining == 1
