@@ -28,6 +28,7 @@ jobs:
     - name: Run tests with coverage
       run: |
         coverage run -m pytest
+        coverage report --fail-under=85
         coverage report
         coverage xml  # generates coverage.xml required by Codecov
 
