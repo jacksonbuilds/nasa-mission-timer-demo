@@ -82,3 +82,13 @@ class CountdownTimer:
         self.remaining = self.duration
         self.state = TimerState.IDLE
         logging.info("Timer reset")
+
+def main():
+    seconds = int(input("Enter countdown time in seconds: "))
+    timer = CountdownTimer(seconds)
+    timer.start()
+    while timer.state != TimerState.COMPLETE:
+        timer.tick()
+
+if __name__ == "__main__":
+    main()
