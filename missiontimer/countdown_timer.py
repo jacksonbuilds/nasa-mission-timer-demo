@@ -84,11 +84,16 @@ class CountdownTimer:
         logging.info("Timer reset")
 
 def main():
-    seconds = int(input("Enter countdown time in seconds: "))
-    timer = CountdownTimer(seconds)
-    timer.start()
-    while timer.state != TimerState.COMPLETE:
-        timer.tick()
+    try:
+        seconds = int(input("Enter countdown time in seconds: "))
+        timer = CountdownTimer(seconds)
+        timer.start()
+        while timer.state != TimerState.COMPLETE:
+            timer.tick()
+    except ValueError:
+        print("Please enter a valid integer for the countdown time.")
+    except KeyboardInterrupt:
+        print("\nTimer interrupted by user.")
 
 if __name__ == "__main__":
     main()

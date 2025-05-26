@@ -35,11 +35,6 @@ You can run the timer from the command line:
 ```bash
 python missiontimer/countdown_timer.py
 ```
-After entering a time, use these keys to control the countdown:
-
-```bash
-[s=start, p=pause, r=resume, x=reset, q=quit]
-```
 
 ## 🧪 Testing
 

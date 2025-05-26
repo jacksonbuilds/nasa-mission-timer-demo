@@ -176,3 +176,6 @@ __pycache__/
 
 #Ignore .ini config files
 *.ini
+
+# macOS system files
+.DS_Store
