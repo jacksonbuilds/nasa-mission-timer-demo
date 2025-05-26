@@ -35,7 +35,7 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+        token: ${{ secrets.CODECOV_TOKEN }} #Not required, but useful to bypass free limitations
         files: coverage.xml
         flags: unittests
         name: codecov-coverage-report
