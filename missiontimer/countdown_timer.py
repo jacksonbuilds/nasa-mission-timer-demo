@@ -4,24 +4,26 @@ from enum import Enum
 
 # Configure logging to write to a telemetry file with timestamps
 logging.basicConfig(
-    filename='telemetry.log',
-    level=logging.INFO,
-    format='%(asctime)s %(message)s'
+    filename="telemetry.log", level=logging.INFO, format="%(asctime)s %(message)s"
 )
+
 
 class TimerState(Enum):
     """
     Enum representing the different states of the countdown timer.
     """
+
     IDLE = 0
     RUNNING = 1
     PAUSED = 2
     COMPLETE = 3
 
+
 class CountdownTimer:
     """
     CountdownTimer simulates a mission countdown with support for pause, resume, and reset.
     """
+
     def __init__(self, duration: int):
         """
         Initialize the timer.
@@ -59,6 +61,7 @@ class CountdownTimer:
                 logging.info("Launch!")
                 self.state = TimerState.COMPLETE
 
+
 def main():
     try:
         seconds = int(input("Enter countdown time in seconds: "))
@@ -70,6 +73,7 @@ def main():
         print("Please enter a valid integer for the countdown time.")
     except KeyboardInterrupt:
         print("\nTimer interrupted by user.")
+
 
 if __name__ == "__main__":
     main()
