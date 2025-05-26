@@ -73,12 +73,10 @@ nasa-mission-timer-demo/
 ```bash
 2025-05-25 12:00:01,123 T-minus 5 seconds
 2025-05-25 12:00:02,124 T-minus 4 seconds
-2025-05-25 12:00:03,125 Timer paused
-2025-05-25 12:00:04,126 Timer resumed
-2025-05-25 12:00:05,127 T-minus 3 seconds
-2025-05-25 12:00:06,128 T-minus 2 seconds
-2025-05-25 12:00:07,129 T-minus 1 seconds
-2025-05-25 12:00:08,130 Launch!
+2025-05-25 12:00:03,127 T-minus 3 seconds
+2025-05-25 12:00:04,128 T-minus 2 seconds
+2025-05-25 12:00:05,129 T-minus 1 seconds
+2025-05-25 12:00:06,130 Launch!
 ```
 
 ## 🧠 Learn More
