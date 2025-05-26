@@ -1,70 +1,86 @@
 # 🚀 NASA Mission Timer Demo
 
-This is a small educational software project that simulates a mission countdown timer with telemetry logging. It's structured to demonstrate high-level software engineering principles inspired by [NASA's NPR 7150.2D](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_&page_name=main) standard for software development.
+This is a small, educational Python package that simulates a mission countdown timer with telemetry logging. It's built to reflect software development principles inspired by [NASA's NPR 7150.2D](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_). The project includes a structured codebase, documentation, and tests to demonstrate good engineering discipline.
 
-> **Note:** This is a demo project meant for learning and exploration. It is not intended for actual flight use or critical systems.
+> **Note:** This is a demo project for learning purposes. It is not intended for real-time, critical, or flight-grade use.
 
 ---
 
 ## 🎯 Project Goals
 
-- Practice disciplined software engineering using NPR 7150.2D as a guide
-- Implement a simple, testable system (a countdown timer) in Python
-- Demonstrate process artifacts: requirements, design, verification, configuration management
-- Explore how code structure, documentation, and validation tie into NASA-style standards
+- Build and package a modular countdown timer system
+- Apply software engineering practices based on NPR 7150.2D
+- Practice writing requirements, design docs, and test plans
+- Implement a working telemetry logger with state control (pause/resume/reset)
 
 ---
 
-## 🧩 Features
+## 📦 Installation
 
-- ✅ Countdown timer (with configurable time)
-- ⏸ Pause, resume, and reset support
-- 🧾 Telemetry log (timestamped events)
-- 🧪 Unit tests for logic and state
-- 📋 Requirements and validation documentation
-- 📘 NPR 7150.2D compliance matrix
-
----
-
-## 🛠️ Running the Project
-
-Make sure you're using Python 3.8 or later.
+Clone the repo and install the package in editable mode:
 
 ```bash
-python src/countdown_timer.py
+git clone https://github.com/YOUR_USERNAME/nasa-mission-timer-demo.git
+cd nasa-mission-timer-demo
+pip install -e .
 ```
-You'll be prompted to enter a countdown time in seconds and then can control the timer with:
+This allows you to edit the code and immediately see changes when running or testing.
 
+## ▶️ Usage
+
+You can run the timer from the command line:
+
+python missiontimer/countdown_timer.py
+
+You’ll be prompted to enter a countdown time in seconds, then interact via:
 ```bash
 [s=start, p=pause, r=resume, x=reset, q=quit]
 ```
 
-## ✅ Running Tests
+## 🧪 Testing
 
-Tests are written with pytest. From the project root:
+Use pytest for automated unit testing.
 
-## Install pytest if you haven't already
+To run tests:
+
+pytest
+
+If needed, install it:
+
 pip install pytest
-
-## Run tests with proper path
-PYTHONPATH=src pytest
 
 ## 📂 Project Structure
 
+```bash
 nasa-mission-timer-demo/
-├── src/                         # Application code
+├── missiontimer/                  # Python package
+│   ├── __init__.py
 │   └── countdown_timer.py
-├── tests/                       # Unit tests
+├── tests/                         # Unit tests
 │   └── test_timer.py
-├── docs/                        # Documentation per NPR 7150.2D
+├── docs/                          # Requirements, design, V&V, etc.
 │   ├── software_requirements_specification.md
 │   ├── software_design_description.md
 │   ├── software_development_plan.md
 │   ├── verification_validation_plan.md
 │   └── npr_7150_2d_compliance_matrix.md
-├── telemetry.log                # Output log of countdown events
+├── pyproject.toml
 ├── README.md
 └── .gitignore
+```
+
+## 📡 Sample Telemetry Log
+
+```bash
+2025-05-25 12:00:01,123 T-minus 5 seconds
+2025-05-25 12:00:02,124 T-minus 4 seconds
+2025-05-25 12:00:03,125 Timer paused
+2025-05-25 12:00:04,126 Timer resumed
+2025-05-25 12:00:05,127 T-minus 3 seconds
+2025-05-25 12:00:06,128 T-minus 2 seconds
+2025-05-25 12:00:07,129 T-minus 1 seconds
+2025-05-25 12:00:08,130 Launch!
+```
 
 ## 🧠 Learn More
 
@@ -74,4 +90,4 @@ nasa-mission-timer-demo/
 
 ## 📜 License
 
-This project is open source and available under the MIT License.
+MIT License. See LICENSE file for details.
