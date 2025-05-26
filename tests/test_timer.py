@@ -1,4 +1,4 @@
-from src.countdown_timer import CountdownTimer, TimerState
+from missiontimer.countdown_timer import CountdownTimer, TimerState
 
 def test_timer_initialization():
     timer = CountdownTimer(10)
