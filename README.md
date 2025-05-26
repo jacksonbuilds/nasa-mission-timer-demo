@@ -23,7 +23,7 @@ This is a small, educational Python package that simulates a mission countdown t
 Clone the repo and install the package in editable mode:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/nasa-mission-timer-demo.git
+git clone https://github.com/jacksonbuilds/nasa-mission-timer-demo.git
 cd nasa-mission-timer-demo
 pip install -e .
 ```
