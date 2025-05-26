@@ -2,47 +2,83 @@ import time
 import logging
 from enum import Enum
 
-logging.basicConfig(filename='telemetry.log', level=logging.INFO, format='%(asctime)s %(message)s')
+# Configure logging to write to a telemetry file with timestamps
+logging.basicConfig(
+    filename='telemetry.log',
+    level=logging.INFO,
+    format='%(asctime)s %(message)s'
+)
 
 class TimerState(Enum):
+    """
+    Enum representing the different states of the countdown timer.
+    """
     IDLE = 0
     RUNNING = 1
     PAUSED = 2
     COMPLETE = 3
 
 class CountdownTimer:
+    """
+    CountdownTimer simulates a mission countdown with support for pause, resume, and reset.
+    """
     def __init__(self, duration: int):
+        """
+        Initialize the timer.
+
+        Args:
+            duration (int): Total countdown time in seconds. Must be non-negative.
+        """
         assert isinstance(duration, int) and duration >= 0
         self.duration = duration
         self.remaining = duration
         self.state = TimerState.IDLE
 
     def start(self):
+        """
+        Transition the timer to the RUNNING state.
+        Only works if the timer is currently IDLE or PAUSED.
+        """
         if self.state in [TimerState.IDLE, TimerState.PAUSED]:
             self.state = TimerState.RUNNING
 
     def tick(self):
+        """
+        Advance the timer by one second if it's RUNNING.
+        Logs each second and updates the remaining time.
+        Transitions to COMPLETE when countdown reaches zero.
+        """
         if self.state == TimerState.RUNNING and self.remaining > 0:
             print(f"T-minus {self.remaining} seconds")
             logging.info(f"T-minus {self.remaining} seconds")
             self.remaining -= 1
             time.sleep(1)
+
             if self.remaining == 0:
                 print("Launch!")
                 logging.info("Launch!")
                 self.state = TimerState.COMPLETE
 
     def pause(self):
+        """
+        Pause the countdown if it is currently running.
+        """
         if self.state == TimerState.RUNNING:
             self.state = TimerState.PAUSED
             logging.info("Timer paused")
 
     def resume(self):
+        """
+        Resume the countdown if it is currently paused.
+        """
         if self.state == TimerState.PAUSED:
             self.state = TimerState.RUNNING
             logging.info("Timer resumed")
 
     def reset(self):
+        """
+        Reset the countdown to the original duration and return to IDLE state.
+        """
         self.remaining = self.duration
         self.state = TimerState.IDLE
         logging.info("Timer reset")
