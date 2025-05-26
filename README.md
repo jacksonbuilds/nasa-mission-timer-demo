@@ -1,4 +1,5 @@
 ![Tests](https://github.com/jacksonbuilds/nasa-mission-timer-demo/actions/workflows/test.yml/badge.svg)
+[![codecov](https://codecov.io/gh/jacksonbuilds/nasa-mission-timer-demo/branch/main/graph/badge.svg)](https://codecov.io/gh/jacksonbuilds/nasa-mission-timer-demo)
 
 # 🚀 NASA Mission Timer Demo
 
