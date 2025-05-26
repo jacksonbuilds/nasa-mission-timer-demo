@@ -27,31 +27,32 @@ git clone https://github.com/jacksonbuilds/nasa-mission-timer-demo.git
 cd nasa-mission-timer-demo
 pip install -e .
 ```
-This allows you to edit the code and immediately see changes when running or testing.
+This allows you to edit the code and immediately see changes when running or testing
 
 ## ▶️ Usage
 
 You can run the timer from the command line:
-
+```bash
 python missiontimer/countdown_timer.py
+```
+After entering a time, use these keys to control the countdown:
 
-You’ll be prompted to enter a countdown time in seconds, then interact via:
 ```bash
 [s=start, p=pause, r=resume, x=reset, q=quit]
 ```
 
 ## 🧪 Testing
 
-Use pytest for automated unit testing.
+Use pytest for automated unit testing
 
 To run tests:
-
+```bash
 pytest
-
+```
 If needed, install it:
-
+```bash
 pip install pytest
-
+```
 ## 📂 Project Structure
 
 ```bash
@@ -93,4 +94,4 @@ nasa-mission-timer-demo/
 
 ## 📜 License
 
-MIT License. See LICENSE file for details.
+MIT License. See LICENSE file for details
