@@ -6,13 +6,6 @@ def test_timer_initialization():
     assert timer.remaining == 10
     assert timer.state == TimerState.IDLE
 
-def test_reset_functionality():
-    timer = CountdownTimer(5)
-    timer.remaining = 1
-    timer.reset()
-    assert timer.remaining == 5
-    assert timer.state == TimerState.IDLE
-
 @patch('time.sleep', return_value=None)
 def test_pause_resume_transitions(mock_sleep):
     timer = CountdownTimer(3)
@@ -24,13 +17,3 @@ def test_pause_resume_transitions(mock_sleep):
     # Advance one tick
     timer.tick()
     assert timer.remaining == 2
-
-    # Pause it
-    timer.pause()
-    assert timer.state == TimerState.PAUSED
-
-    # Resume and tick again
-    timer.resume()
-    assert timer.state == TimerState.RUNNING
-    timer.tick()
-    assert timer.remaining == 1

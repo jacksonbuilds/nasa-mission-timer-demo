@@ -59,30 +59,6 @@ class CountdownTimer:
                 logging.info("Launch!")
                 self.state = TimerState.COMPLETE
 
-    def pause(self):
-        """
-        Pause the countdown if it is currently running.
-        """
-        if self.state == TimerState.RUNNING:
-            self.state = TimerState.PAUSED
-            logging.info("Timer paused")
-
-    def resume(self):
-        """
-        Resume the countdown if it is currently paused.
-        """
-        if self.state == TimerState.PAUSED:
-            self.state = TimerState.RUNNING
-            logging.info("Timer resumed")
-
-    def reset(self):
-        """
-        Reset the countdown to the original duration and return to IDLE state.
-        """
-        self.remaining = self.duration
-        self.state = TimerState.IDLE
-        logging.info("Timer reset")
-
 def main():
     try:
         seconds = int(input("Enter countdown time in seconds: "))
