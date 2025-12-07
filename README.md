@@ -1,15 +1,15 @@
 ![Tests](https://github.com/jacksonbuilds/nasa-mission-timer-demo/actions/workflows/test.yml/badge.svg)
 [![codecov](https://codecov.io/gh/jacksonbuilds/nasa-mission-timer-demo/branch/main/graph/badge.svg)](https://codecov.io/gh/jacksonbuilds/nasa-mission-timer-demo)
 
-# 🚀 NASA Mission Timer Demo
+# NASA Mission Timer Demo
 
 This is a small, educational Python package that simulates a mission countdown timer with telemetry logging. It's built to reflect software development principles inspired by [NASA's NPR 7150.2D](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_). The project includes a structured codebase, documentation, and tests to demonstrate good engineering discipline.
 
-> **Note:** This is a demo project for learning purposes. It is not intended for real-time, critical, or flight-grade use.
+> **Note:** This is a demo project for learning purposes.
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Build and package a modular countdown timer system
 - Apply software engineering practices based on NPR 7150.2D
@@ -18,7 +18,7 @@ This is a small, educational Python package that simulates a mission countdown t
 
 ---
 
-## 📦 Installation
+## Installation
 
 Clone the repo and install the package in editable mode:
 
@@ -29,14 +29,14 @@ pip install -e .
 ```
 This allows you to edit the code and immediately see changes when running or testing
 
-## ▶️ Usage
+## ▶Usage
 
 You can run the timer from the command line:
 ```bash
 python missiontimer/countdown_timer.py
 ```
 
-## 🧪 Testing
+## Testing
 
 Use pytest for automated unit testing
 
@@ -48,7 +48,7 @@ If needed, install it:
 ```bash
 pip install pytest
 ```
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 nasa-mission-timer-demo/
@@ -68,7 +68,7 @@ nasa-mission-timer-demo/
 └── .gitignore
 ```
 
-## 📡 Sample Telemetry Log
+## Sample Telemetry Log
 
 ```bash
 2025-05-25 12:00:01,123 T-minus 5 seconds
@@ -79,12 +79,12 @@ nasa-mission-timer-demo/
 2025-05-25 12:00:06,130 Launch!
 ```
 
-## 🧠 Learn More
+## Learn More
 
 - 📄 [NPR 7150.2D - NASA Software Engineering Requirements](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_)
 - 📝 [10 Rules for Developing Safety Critical Code (JPL)](https://plavos.com/blog/nasas-10-rules-for-space-proof-code/)
 - 🧪 [pytest documentation](https://docs.pytest.org/en/stable/)
 
-## 📜 License
+## License
 
 MIT License. See LICENSE file for details
