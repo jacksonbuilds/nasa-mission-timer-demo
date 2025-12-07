@@ -29,7 +29,7 @@ pip install -e .
 ```
 This allows you to edit the code and immediately see changes when running or testing
 
-## ▶Usage
+## Usage
 
 You can run the timer from the command line:
 ```bash
