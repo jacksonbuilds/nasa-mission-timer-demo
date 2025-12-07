@@ -81,9 +81,9 @@ nasa-mission-timer-demo/
 
 ## Learn More
 
-- 📄 [NPR 7150.2D - NASA Software Engineering Requirements](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_)
-- 📝 [10 Rules for Developing Safety Critical Code (JPL)](https://plavos.com/blog/nasas-10-rules-for-space-proof-code/)
-- 🧪 [pytest documentation](https://docs.pytest.org/en/stable/)
+- [NPR 7150.2D - NASA Software Engineering Requirements](https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7150_002D_)
+- [10 Rules for Developing Safety Critical Code (JPL)](https://plavos.com/blog/nasas-10-rules-for-space-proof-code/)
+- [pytest documentation](https://docs.pytest.org/en/stable/)
 
 ## License
 
